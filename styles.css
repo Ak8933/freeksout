@@ -1,0 +1,253 @@
+
+
+   body {
+  margin: 0;
+  overflow: hidden; /* This will remove the scrollbar */
+}
+
+  
+  .header {
+    position:relative;
+    /* text-align:center; */
+    background: linear-gradient(60deg, rgb(2, 0, 31) 0%, rgb(0, 7, 39) 100%);
+    color:white;
+    height: 100vh;
+  }
+  
+ nav{
+    display: flex;
+    justify-content: space-between;
+    
+ }
+
+ .img{
+  padding-top: 13px;
+  padding-left: 185px;
+ }
+
+ .img>img{
+  width: 43px;
+  height: 50px;
+ /* padding: 10px; */
+ }
+
+
+
+ 
+ .inner-header {
+    height:79vh;
+    width:100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar>nav>.right{
+    margin-right: 143px;
+  }
+  
+  .navbar>nav>.right>ul{
+    list-style: none;
+    display: flex;
+  }
+
+  nav ul li{
+    /* padding: (25px,5px); */
+    padding-top: 10px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: rgb(155, 155, 155);
+    cursor: pointer;
+    opacity: 0.8;
+    font-size: 15px;
+    font-weight:100;
+    font-style: normal;
+  }
+
+  nav ul li:hover{
+    color: white;
+  }
+
+.main{
+  display: flex;
+  margin-top: 130px;
+  justify-content: space-between;
+  
+}
+
+  .left_main,.right_main{
+ width: 50vw;
+ height: 40vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ /* border: 2px solid white; */
+  }
+
+  .right_main{
+    margin-right: 100px;
+  }
+  .left_main{
+    flex-direction: column;
+    margin-left: 40px;
+  }
+
+  #big{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  #small{
+     font-size: 20px;
+     margin: 0px;
+     margin-left: 40px;
+     opacity: 0.6;
+  }
+
+  .btn{
+    margin-left: 40px;
+    
+    padding: 20px;
+    
+  }
+
+  .bns{
+    margin: 20px;
+    width: 200px;
+    height: 55px;
+    border-radius: 10px;
+  }
+
+  /* .btn>button{
+    padding: 20px;
+  } */
+
+  .btn>button{
+    background:  rgb(85, 255, 139);
+    cursor: pointer;
+  }
+
+  .dot-container {
+    position: relative;
+    /* width: 100%;*/
+    /* height: 100%;  */
+    z-index: 1;
+ }
+ 
+ .star {
+    position: absolute;
+    background-color: white;
+    z-index: -1;
+ }
+ 
+ .star-large {
+    width: 3px;
+    height: 3px;
+    animation: moveStar linear infinite;
+    animation-duration: 30s;
+ }
+ 
+ .star-small {
+    width: 1px;
+    height: 1px;
+    animation: moveStarFast linear infinite;
+    animation-duration: 20s;
+ }
+ 
+
+  
+
+ @keyframes moveStar {
+    0% {
+       transform: translateY(100vh);
+    }
+    100% {
+       transform: translateY(-100vh);
+    }
+ }
+ 
+ @keyframes moveStarFast {
+    0% {
+       transform: translateY(100vh);
+    }
+    100% {
+       transform: translateY(-100vh);
+    }
+ }
+  
+  
+ .waves {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 79vh);
+    min-height: 150px; /* Adjust this value as needed */
+    max-height: 150px; /* Adjust this value as needed */
+  }
+  
+  
+  
+  
+  /* Animation */
+  
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -5s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -6.7s;
+    animation-duration: 16s;
+  }
+  
+  @keyframes move-forever {
+    0% {
+     transform: translate3d(90px,0,0);
+    }
+    100% { 
+      transform: translate3d(-90px,0,0);
+    }
+  }
+  /*Shrinking for mobile*/
+  /* @media (max-width: 768px) {
+    .waves {
+      height:40px;
+      min-height:40px;
+    }
+  } */
+
+  @media (max-width: 968px) {
+    
+    .right_main>img{
+      display: none;
+    }
+    .left_main{
+      width: 100%!important ;
+    }
+
+    .left1{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+ 
+  @media only screen and (min-width: 720px) and (max-width: 968px){
+    .right_main>img{
+      display: none;
+    }
+  }
+
+
+  /* .header::-webkit-scrollbar {
+    display: none;
+  } */
+  
